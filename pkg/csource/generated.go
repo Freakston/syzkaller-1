@@ -173,8 +173,12 @@ static void use_temporary_dir(void)
 #endif
 #endif
 #if GOOS_windows
+<<<<<<< HEAD
 static void use_temporary_dir(void)
 {
+=======
+static void use_temporary_dir(void) {
+>>>>>>> 60a533e4... fix mmap issue in ipc_test
 	char tmpdir_template[] = "./syzkaller.XXXXXX";
 	char* tmpdir = mktemp(tmpdir_template);
 
