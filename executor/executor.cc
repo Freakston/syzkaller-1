@@ -564,8 +564,8 @@ void receive_execute()
 	for (;;) {
 <<<<<<< HEAD
 		ssize_t rv = read(kInPipeFd, input_data + pos, sizeof(input_data) - pos);
-=======
-		ssize_t rv = read(kInPipeFd, input_data + pos, sizeof(input_data) - pos);		
+		== == == =
+			     ssize_t rv = read(kInPipeFd, input_data + pos, sizeof(input_data) - pos);		
 >>>>>>> 79cb509f... apply suggested changes
 		if (rv < 0)
 			fail("read failed");
@@ -1237,11 +1237,11 @@ void copyin(char* addr, uint64 val, uint64 size, uint64 bf, uint64 bf_off, uint6
 bool copyout(char* addr, uint64 size, uint64* res)
 <<<<<<< HEAD
 {
-=======
-{	
+	== == == =
+	{	
 >>>>>>> 79cb509f... apply suggested changes
-#if GOOS_windows
-	std::atomic_bool ok = false;
+		#if GOOS_windows
+		    std::atomic_bool ok = false;
 	NONFAILING(
 	    switch (size) {
 		    case 1:
